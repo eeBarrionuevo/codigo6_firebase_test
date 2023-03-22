@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:shoesapp/list_page.dart';
+import 'package:shoesapp/stream_page.dart';
 
 class HomePage extends StatelessWidget {
   CollectionReference productsReferences =
@@ -87,6 +88,13 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(builder: (context) => ListPage()));
               },
               child: Text("Ver Lista"),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => StreamPage()));
+              },
+              child: Text("Stream"),
             ),
           ],
         ),
